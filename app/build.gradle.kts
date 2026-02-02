@@ -15,4 +15,6 @@ dependencies {
     compileOnly(libs.lombok)
     annotationProcessor(libs.lombok)
     runtimeOnly(libs.h2)
+
+    testImplementation(libs.spring.boot.test)
 }
