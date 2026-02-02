@@ -17,4 +17,5 @@ dependencies {
     runtimeOnly(libs.h2)
 
     testImplementation(libs.spring.boot.test)
+    testRuntimeOnly(libs.junit.platform.launcher)
 }

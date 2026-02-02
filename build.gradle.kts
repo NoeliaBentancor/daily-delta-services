@@ -15,4 +15,7 @@ allprojects {
 subprojects {
     apply(plugin = "java")
 
+    tasks.named<Test>("test") {
+        useJUnitPlatform()
+    }
 }
