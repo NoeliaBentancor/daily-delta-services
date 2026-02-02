@@ -10,6 +10,6 @@ dependencies {
     implementation(project(":application"))
     implementation(project(":infrastructure"))
 
-    runtimeOnly 'com.h2database:h2'
+    runtimeOnly("com.h2database:h2")
 
 }
