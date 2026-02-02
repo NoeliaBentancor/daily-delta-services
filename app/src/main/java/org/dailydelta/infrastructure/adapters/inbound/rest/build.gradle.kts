@@ -1,15 +1,3 @@
-plugins {
-    id("org.springframework.boot")
-    java
-}
-
-dependencies {
-    implementation("org.springframework.boot:spring-boot-starter")
-    implementation("org.springframework.boot:spring-boot-starter-web")
-
-    implementation(project(":application"))
-    implementation(project(":infrastructure"))
-
-    runtimeOnly("com.h2database:h2")
-
-}
+// This file was incorrectly placed under src/main/java.
+// Build configuration for this module should live at the module root,
+// e.g. in app/build.gradle.kts. This file is intentionally left empty.
