@@ -1,0 +1,46 @@
+[versions]
+spring-boot = "3.4.1"
+spring-dependency-management = "1.1.7"
+lombok = "1.18.30"
+mapstruct = "1.5.5.Final"
+jakarta-validation = "3.0.2"
+jakarta-persistence = "3.1.0"
+jackson = "2.15.3"
+h2 = "2.2.224"
+
+[libraries]
+# Spring Boot
+spring-boot-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+spring-boot-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+spring-boot-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa" }
+
+# Database
+h2 = { module = "com.h2database:h2", version.ref = "h2" }
+jakarta-persistence = { module = "jakarta.persistence:jakarta.persistence-api", version.ref = "jakarta-persistence" }
+
+# Validation
+jakarta-validation = { module = "jakarta.validation:jakarta.validation-api", version.ref = "jakarta-validation" }
+
+# Mapping
+mapstruct = { module = "org.mapstruct:mapstruct", version.ref = "mapstruct" }
+mapstruct-processor = { module = "org.mapstruct:mapstruct-processor", version.ref = "mapstruct" }
+lombok-mapstruct-binding = { module = "org.projectlombok:lombok-mapstruct-binding", version = "0.2.0" }
+
+# Lombok
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+
+# Jackson
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+jackson-datatype-jsr310 = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310", version.ref = "jackson" }
+
+# Testing
+spring-boot-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+
+[bundles]
+spring-web = ["spring-boot-web", "spring-boot-validation"]
+jackson = ["jackson-databind", "jackson-datatype-jsr310"]
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
