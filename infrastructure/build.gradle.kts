@@ -13,6 +13,7 @@ dependencies {
     // MapStruct
     implementation(libs.mapstruct)
     annotationProcessor(libs.mapstruct.processor)
+    annotationProcessor(libs.lombok.mapstruct.binding)
 
     // Jakarta
     implementation(libs.jakarta.persistence)
