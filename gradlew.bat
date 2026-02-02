@@ -70,8 +70,14 @@ goto fail
 :execute
 @rem Setup the command line
 
-
-
+@rem Verify that the Gradle wrapper JAR exists
+if not exist "%APP_HOME%\gradle\wrapper\gradle-wrapper.jar" (
+    echo. 1>&2
+    echo ERROR: The Gradle wrapper JAR is missing: "%APP_HOME%\gradle\wrapper\gradle-wrapper.jar" 1>&2
+    echo. 1>&2
+    echo Please ensure that gradle-wrapper.jar is present under the gradle\wrapper directory and committed to version control. 1>&2
+    goto fail
+)
 @rem Execute Gradle
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -jar "%APP_HOME%\gradle\wrapper\gradle-wrapper.jar" %*
 
